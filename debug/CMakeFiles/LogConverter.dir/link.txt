@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/LogConverter.dir/main.cpp.o CMakeFiles/LogConverter.dir/source/filter_parser.cpp.o -o LogConverter 
