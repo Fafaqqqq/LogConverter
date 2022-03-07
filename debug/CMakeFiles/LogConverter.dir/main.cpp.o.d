@@ -125,7 +125,13 @@ CMakeFiles/LogConverter.dir/main.cpp.o: \
  /usr/include/c++/11.2.0/bits/locale_facets.tcc \
  /usr/include/c++/11.2.0/bits/basic_ios.tcc \
  /usr/include/c++/11.2.0/bits/ostream.tcc /usr/include/c++/11.2.0/istream \
- /usr/include/c++/11.2.0/bits/istream.tcc \
+ /usr/include/c++/11.2.0/bits/istream.tcc /usr/include/c++/11.2.0/sstream \
+ /usr/include/c++/11.2.0/bits/sstream.tcc /usr/include/c++/11.2.0/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/c++/11.2.0/fstream /usr/include/c++/11.2.0/bits/codecvt.h \
+ /usr/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/11.2.0/bits/fstream.tcc \
  /home/fafaq/CLionProjects/LogConverter/include/filter_parser.h \
  /usr/include/c++/11.2.0/vector \
  /usr/include/c++/11.2.0/bits/stl_uninitialized.h \
@@ -149,4 +155,6 @@ CMakeFiles/LogConverter.dir/main.cpp.o: \
  /usr/include/c++/11.2.0/bits/shared_ptr_atomic.h \
  /usr/include/c++/11.2.0/bits/atomic_base.h \
  /usr/include/c++/11.2.0/bits/atomic_lockfree_defines.h \
- /usr/include/c++/11.2.0/backward/auto_ptr.h
+ /usr/include/c++/11.2.0/backward/auto_ptr.h \
+ /home/fafaq/CLionProjects/LogConverter/include/converter.h \
+ /home/fafaq/CLionProjects/LogConverter/include/filter_parser.h

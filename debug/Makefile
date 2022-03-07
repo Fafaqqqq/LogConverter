@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogConverter.dir/build.make CMakeFiles/LogConverter.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+source/converter.o: source/converter.cpp.o
+.PHONY : source/converter.o
+
+# target to build an object file
+source/converter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogConverter.dir/build.make CMakeFiles/LogConverter.dir/source/converter.cpp.o
+.PHONY : source/converter.cpp.o
+
+source/converter.i: source/converter.cpp.i
+.PHONY : source/converter.i
+
+# target to preprocess a source file
+source/converter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogConverter.dir/build.make CMakeFiles/LogConverter.dir/source/converter.cpp.i
+.PHONY : source/converter.cpp.i
+
+source/converter.s: source/converter.cpp.s
+.PHONY : source/converter.s
+
+# target to generate assembly for a file
+source/converter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogConverter.dir/build.make CMakeFiles/LogConverter.dir/source/converter.cpp.s
+.PHONY : source/converter.cpp.s
+
 source/filter_parser.o: source/filter_parser.cpp.o
 .PHONY : source/filter_parser.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... source/converter.o"
+	@echo "... source/converter.i"
+	@echo "... source/converter.s"
 	@echo "... source/filter_parser.o"
 	@echo "... source/filter_parser.i"
 	@echo "... source/filter_parser.s"
