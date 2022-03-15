@@ -1,7 +1,3 @@
-//
-// Created by fafaq on 06.03.2022.
-//
-
 #ifndef LOGCONVERTER_FILTER_PARSER_H
 #define LOGCONVERTER_FILTER_PARSER_H
 
@@ -19,7 +15,7 @@ namespace log_converter {
 
     class filter_parser {
     public:
-        std::unique_ptr<filter> parse_string(const std::string& input);
+        filter parse_string(const std::string& input);
     };
 }
 

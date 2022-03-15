@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.21"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Release",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "LogConverter::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-LogConverter-Release-95986102d77697534911.json",
+					"jsonFile" : "target-LogConverter-Debug-ca3961314eb8fa9215fe.json",
 					"name" : "LogConverter",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/fafaq/CLionProjects/LogConverter/release",
+		"build" : "/home/fafaq/CLionProjects/LogConverter/debug",
 		"source" : "/home/fafaq/CLionProjects/LogConverter"
 	},
 	"version" : 

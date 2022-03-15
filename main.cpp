@@ -1,11 +1,15 @@
 #include <iostream>
+#include <fstream>
+
 #include "include/filter_parser.h"
+#include "include/converter.h"
+#include "include/console_interactor.h"
 
-int main() {
+int main(int argc, char** argv) {
 
-    log_converter::filter_parser parser;
+    log_converter::console_interactor interactor(argc, (const char**)argv);
 
-    auto filt = parser.parse_string("thread switch=%t \" | sys | thread switch hndl \" %s \" addr \" %s \" pri \" %d");
+    interactor.run();
 
     return 0;
 }
