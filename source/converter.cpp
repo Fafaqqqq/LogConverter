@@ -9,6 +9,8 @@ converter::converter(std::ostream &os, const std::vector<filter>& filters)
 
 
 void log_converter::converter::convert_line(const std::string &input) {
+
+
     auto filter = find_matches(input);
     auto str = remove_substings(input, filter);
     std::istringstream str_stream(str);
@@ -31,6 +33,10 @@ void log_converter::converter::convert_line(const std::string &input) {
             num_bytes = sizeof(time);
             str_stream >> time;
 
+            num_bytes = strlen(DATA_TYPES[TYPES_POSITION::FLOAT]);
+            write_data(&num_bytes, sizeof(num_bytes));
+            write_data(DATA_TYPES[TYPES_POSITION::FLOAT], num_bytes);
+
             write_data(&num_bytes, sizeof(num_bytes));
             write_data(&time, sizeof(time));
         }
@@ -43,6 +49,10 @@ void log_converter::converter::convert_line(const std::string &input) {
             num_bytes = sizeof(num);
             str_stream >> num;
 
+            num_bytes = strlen(DATA_TYPES[TYPES_POSITION::INT]);
+            write_data(&num_bytes, sizeof(num_bytes));
+            write_data(DATA_TYPES[TYPES_POSITION::INT], num_bytes);
+
             write_data(&num_bytes, sizeof(num_bytes));
             write_data(&num, sizeof(num));
         }
@@ -52,10 +62,19 @@ void log_converter::converter::convert_line(const std::string &input) {
 
             str_stream >> buf;
 
+            num_bytes = strlen(DATA_TYPES[TYPES_POSITION::DOUBLE_CHAR]);
+            write_data(&num_bytes, sizeof(num_bytes));
+            write_data(DATA_TYPES[TYPES_POSITION::DOUBLE_CHAR], num_bytes);
+
             write_data(&num_bytes, sizeof(num_bytes));
             write_data(buf, sizeof(buf));
         }
     }
+
+    char new_line = '\n';
+    num_bytes = sizeof(new_line);
+    write_data(&num_bytes, sizeof(num_bytes));
+    write_data(&new_line, sizeof(new_line));
 }
 
 log_converter::filter converter::find_matches(const std::string &src) {
@@ -72,8 +91,6 @@ log_converter::filter converter::find_matches(const std::string &src) {
         if (is_matched) {
             return _filter;
         }
-
-        is_matched = true;
     }
 
     return {};

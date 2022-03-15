@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogConverter.dir/build.make CMakeFiles/LogConverter.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+source/console_interactor.o: source/console_interactor.cpp.o
+.PHONY : source/console_interactor.o
+
+# target to build an object file
+source/console_interactor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogConverter.dir/build.make CMakeFiles/LogConverter.dir/source/console_interactor.cpp.o
+.PHONY : source/console_interactor.cpp.o
+
+source/console_interactor.i: source/console_interactor.cpp.i
+.PHONY : source/console_interactor.i
+
+# target to preprocess a source file
+source/console_interactor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogConverter.dir/build.make CMakeFiles/LogConverter.dir/source/console_interactor.cpp.i
+.PHONY : source/console_interactor.cpp.i
+
+source/console_interactor.s: source/console_interactor.cpp.s
+.PHONY : source/console_interactor.s
+
+# target to generate assembly for a file
+source/console_interactor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogConverter.dir/build.make CMakeFiles/LogConverter.dir/source/console_interactor.cpp.s
+.PHONY : source/console_interactor.cpp.s
+
 source/converter.o: source/converter.cpp.o
 .PHONY : source/converter.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... source/console_interactor.o"
+	@echo "... source/console_interactor.i"
+	@echo "... source/console_interactor.s"
 	@echo "... source/converter.o"
 	@echo "... source/converter.i"
 	@echo "... source/converter.s"

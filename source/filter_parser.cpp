@@ -29,17 +29,17 @@ log_converter::filter log_converter::filter_parser::parse_string(const std::stri
             flt.args.push_back(input.substr(i, 2));
         }
 
-        if (begin != std::string::npos && end != std::string::npos) {
-            flt.strings.push_back(input.substr(begin + 1, end - begin - 1));
-            begin = std::string::npos;
-            end = std::string::npos;
-        }
-
         if (input[i] == '\"' && begin == std::string::npos) {
             begin = i;
         }
         else if (input[i] == '\"' && end == std::string::npos) {
             end = i;
+        }
+
+        if (begin != std::string::npos && end != std::string::npos) {
+            flt.strings.push_back(input.substr(begin + 1, end - begin - 1));
+            begin = std::string::npos;
+            end = std::string::npos;
         }
     }
 
