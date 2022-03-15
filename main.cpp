@@ -1,8 +1,3 @@
-#include <iostream>
-#include <fstream>
-
-#include "include/filter_parser.h"
-#include "include/converter.h"
 #include "include/console_interactor.h"
 
 int main(int argc, char** argv) {
