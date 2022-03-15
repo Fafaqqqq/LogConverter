@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/LogConverter.dir/main.cpp.o"
   "CMakeFiles/LogConverter.dir/main.cpp.o.d"
+  "CMakeFiles/LogConverter.dir/source/console_interactor.cpp.o"
+  "CMakeFiles/LogConverter.dir/source/console_interactor.cpp.o.d"
+  "CMakeFiles/LogConverter.dir/source/converter.cpp.o"
+  "CMakeFiles/LogConverter.dir/source/converter.cpp.o.d"
   "CMakeFiles/LogConverter.dir/source/filter_parser.cpp.o"
   "CMakeFiles/LogConverter.dir/source/filter_parser.cpp.o.d"
   "LogConverter"
