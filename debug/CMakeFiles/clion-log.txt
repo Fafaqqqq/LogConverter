@@ -1,4 +1,4 @@
-/home/fafaq/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" /home/fafaq/CLionProjects/LogConverter
+/home/fafaq/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/221.5591.52/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/fafaq/CLionProjects/LogConverter -B /home/fafaq/CLionProjects/LogConverter/debug
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/fafaq/CLionProjects/LogConverter/debug

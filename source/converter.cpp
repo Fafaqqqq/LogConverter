@@ -30,15 +30,15 @@ void log_converter::converter::convert_line(const std::string &input) {
 
         if (arg == "%t") {
             float time;
-            num_bytes = sizeof(time);
             str_stream >> time;
 
             num_bytes = strlen(DATA_TYPES[TYPES_POSITION::FLOAT]);
             write_data(&num_bytes, sizeof(num_bytes));
             write_data(DATA_TYPES[TYPES_POSITION::FLOAT], num_bytes);
 
+            num_bytes = sizeof(time);
             write_data(&num_bytes, sizeof(num_bytes));
-            write_data(&time, sizeof(time));
+            write_data(&time, num_bytes);
         }
         else if (arg == "%s") {
             std::string s;
@@ -46,28 +46,28 @@ void log_converter::converter::convert_line(const std::string &input) {
         }
         else if (arg == "%d") {
             int num;
-            num_bytes = sizeof(num);
             str_stream >> num;
 
             num_bytes = strlen(DATA_TYPES[TYPES_POSITION::INT]);
             write_data(&num_bytes, sizeof(num_bytes));
             write_data(DATA_TYPES[TYPES_POSITION::INT], num_bytes);
 
+            num_bytes = sizeof(num);
             write_data(&num_bytes, sizeof(num_bytes));
-            write_data(&num, sizeof(num));
+            write_data(&num, num_bytes);
         }
         else if (arg == "%c") {
-            char buf[2];
-            num_bytes = sizeof(buf);
+            std::string s;
 
-            str_stream >> buf;
+            str_stream >> s;
 
-            num_bytes = strlen(DATA_TYPES[TYPES_POSITION::DOUBLE_CHAR]);
+            num_bytes = strlen(DATA_TYPES[TYPES_POSITION::STRING]);
             write_data(&num_bytes, sizeof(num_bytes));
-            write_data(DATA_TYPES[TYPES_POSITION::DOUBLE_CHAR], num_bytes);
+            write_data(DATA_TYPES[TYPES_POSITION::STRING], num_bytes);
 
+            num_bytes = s.size();
             write_data(&num_bytes, sizeof(num_bytes));
-            write_data(buf, sizeof(buf));
+            write_data(s.c_str(), num_bytes);
         }
     }
 

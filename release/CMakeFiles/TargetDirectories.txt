@@ -1,3 +1,3 @@
+/home/fafaq/CLionProjects/LogConverter/release/CMakeFiles/LogConverter.dir
 /home/fafaq/CLionProjects/LogConverter/release/CMakeFiles/edit_cache.dir
 /home/fafaq/CLionProjects/LogConverter/release/CMakeFiles/rebuild_cache.dir
-/home/fafaq/CLionProjects/LogConverter/release/CMakeFiles/LogConverter.dir
